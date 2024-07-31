@@ -17,11 +17,7 @@ pull_request_rules:
           - author=dependabot[bot]
         - and:
           - or:
-            - check-success=success
-            - check-success=ci-cd / success
-            - check-success=CI-CD / success
-            - check-success=ci/cd / success
-            - check-success=CI/CD / success
+            - check-success~=.*success
           - "#review-threads-unresolved=0"
           - "#commits-behind=0"
       - label=dependencies
