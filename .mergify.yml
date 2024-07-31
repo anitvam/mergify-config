@@ -18,11 +18,10 @@ pull_request_rules:
         - and:
           - or:
             - check-success=success
-#            - check-neutral=success
-#            - check-skipped=success
             - check-success=ci-cd / success
-#            - check-neutral=ci-cd / success
-#            - check-skipped=ci-cd / success
+            - check-success=CI-CD / success
+            - check-success=ci/cd / success
+            - check-success=CI/CD / success
           - "#review-threads-unresolved=0"
           - "#commits-behind=0"
       - label=dependencies
